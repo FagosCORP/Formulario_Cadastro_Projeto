@@ -1,0 +1,41 @@
+<%- include('includes/head')%>
+ <%- include('includes/nav')%>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8 my-3">
+            <h1 class=" text-center my-3 " >Continuar</h1>
+            <%- include('includes/error') %>
+           <div class="row">
+               <div class="col-lg ">
+                   <h4>Cadastre-se</h4>
+                   <form action="/login/register" class="Form-cadastro" method="post">
+                    <div class="mb-3">
+                        <input type="hidden" name="_csrf" value=<%= csrfToken %>>
+                      <label for="exampleInputEmail1" class="form-label">Email </label>
+                      <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Senha</label>
+                      <input type="password" name="password" class="form-control" id="exampleInputPassword1" maxlength="12">
+                    </div>
+                  
+            
+                    </div>
+                    <button class="btn btn-primary">Enviar</button>
+                  </form>
+
+               </div>
+               </div>
+             
+             
+            </div>
+           </div>
+            </div>
+
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+</div>
+<%- include('includes/footer')%>
